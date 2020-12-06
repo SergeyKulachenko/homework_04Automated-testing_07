@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:12.0-alpine
+    ports:
+      - 3306:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgres
+    environment:
+      - POSTGRES_USER=hello_django
+      - POSTGRES_PASSWORD=docker123
+      - POSTGRES_DB=first_docker
